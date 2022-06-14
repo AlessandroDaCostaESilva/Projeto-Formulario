@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/CSS/style.css">
+    <link rel="stylesheet" href="src/CSS/responsivo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Formulario de pesquisa</title>
+</head>
+<body>
+    <main>
+        <section class="container" id="container">
+            <div class="Texto">
+                <h1>Registre-se</h1>
+            </div>
+            <form id="form" class="formulario">
+                    <div class="botao">
+                        <input type="text" id="nome" class="register" required>
+                        <label for="nome" class="blabel">Seu Nome</label>
+                    </div>
+                    <div class="botao">
+                        <input type="email" id="email" class="register" required>
+                        <label for="email" class="blabel">E-mail</label>
+                    </div>
+                    <div class="botao">
+                        <input type="password" id="senha" class="register" required>
+                        <label for="senha" class="blabel">Senha desejada</label>
+                    </div>
+                    <div class="info-pessoais">
+                        <div class="botao-aniversario">
+                            <label for="data" class="birthday">Data de nascimento</label>
+                            <input type="date" id="data" class="aniversario">
+                        </div>
+                        <div class="botao-arquivo">
+                            <label for="identidade" class="IdFoto">Foto de perfil</label>
+                            <input type="file" id="identidade" class="Foto">
+                        </div>
+                    </div>
+                    <div class="botao-sexualidade">
+                        <label for="sexo" class="bslabel">Sexualidade</label>
+                        <select name="sexo" id="sexo" class="bsseletor">
+                            <option value="" selected disabled>---Sexo---</option>
+                            <option value="">Masculino</option>
+                            <option value="">Feminino</option>
+                            <option value="">Prefiro não informar</option>
+                        </select>
+                    </div>
+                    <div class="botao-trabalho">
+                        <p>Você é progamador/Desenvolvedor?</p>
+                        <input type="radio" name="programador" id="sP"><label for="sP">Sim</label>
+                        <input type="radio" name="programador" id="nP"><label for="nP">Não</label>
+                    </div>
+                    <div class="programador-sim" id="displayMarca">
+                        <p>Em qual Linguagem você trabalha ou trabalhou</p>
+                        <input type="checkbox" name="Linguagem" id="javaScript"><label for="javaScript">Js</label>
+                        <input type="checkbox" name="Linguagem" id="C#"><label for="C#">C#</label>
+                        <input type="checkbox" name="Linguagem" id="Java"><label for="Java">Java</label>
+                        <input type="checkbox" name="Linguagem" id="php"><label for="php">PhP</label>
+                        <input type="checkbox" name="Linguagem" id="python"><label for="python">Python</label>
+                        <input type="checkbox" name="Linguagem" id="Html"><label for="Html">Html</label>
+                        <input type="checkbox" name="Linguagem" id="CSS"><label for="CSS">CSS</label>
+                    </div>
+                    <div class="experienciaProfissional">
+                        <p> <label for="aboutu">Me conte sobre <span id="experiencia">você</span></label></p>
+                        <textarea rows="8" id="aboutu"></textarea>
+                    </div>
+                <div class="submit">
+                    <button type="submit" id="submitInf" class="submitButton">Enviar Informações</button>
+                </div>
+            </form>
+</section>
+</main>
+<script src="src/Js/index.js"></script>
+</body>
+</html>
