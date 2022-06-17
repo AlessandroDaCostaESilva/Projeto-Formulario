@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/CSS/style.css">
+    <link rel="stylesheet" href="src/CSS/formularioEBotoesIniciais.css">
     <link rel="stylesheet" href="src/CSS/responsivo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,15 +19,15 @@
             <form id="form" class="formulario">
                     <div class="botao">
                         <input type="text" id="nome" class="register" required>
-                        <label for="nome" class="blabel">Seu Nome</label>
+                        <label for="nome" class="blabel label1">Seu Nome</label>
                     </div>
                     <div class="botao">
                         <input type="email" id="email" class="register" required>
-                        <label for="email" class="blabel">E-mail</label>
+                        <label for="email" class="blabel label2">E-mail</label>
                     </div>
                     <div class="botao">
                         <input type="password" id="senha" class="register" required>
-                        <label for="senha" class="blabel">Senha desejada</label>
+                        <label for="senha" class="blabel label3">Senha desejada</label>
                     </div>
                     <div class="info-pessoais">
                         <div class="botao-aniversario">
@@ -50,22 +50,22 @@
                     </div>
                     <div class="botao-trabalho">
                         <p>Você é progamador/Desenvolvedor?</p>
-                        <input type="radio" name="programador" id="sP"><label for="sP">Sim</label>
-                        <input type="radio" name="programador" id="nP"><label for="nP">Não</label>
+                        <input type="radio" name="programador" id="sP" class="radio-Progamador"><label for="sP">Sim</label>
+                        <input type="radio" name="programador" id="nP" class="radio-Progamador"><label for="nP">Não</label>
                     </div>
                     <div class="programador-sim" id="displayMarca">
-                        <p>Em qual Linguagem você trabalha ou trabalhou</p>
-                        <input type="checkbox" name="Linguagem" id="javaScript"><label for="javaScript">Js</label>
-                        <input type="checkbox" name="Linguagem" id="C#"><label for="C#">C#</label>
-                        <input type="checkbox" name="Linguagem" id="Java"><label for="Java">Java</label>
-                        <input type="checkbox" name="Linguagem" id="php"><label for="php">PhP</label>
-                        <input type="checkbox" name="Linguagem" id="python"><label for="python">Python</label>
-                        <input type="checkbox" name="Linguagem" id="Html"><label for="Html">Html</label>
-                        <input type="checkbox" name="Linguagem" id="CSS"><label for="CSS">CSS</label>
+                        <p>Em quais Linguagens você trabalha ou trabalhou</p>
+                        <input type="checkbox" name="Linguagem" id="javaScript" class="caixaChecagem"><label for="javaScript">Js</label>
+                        <input type="checkbox" name="Linguagem" id="C#" class="caixaChecagem"><label for="C#">C#</label>
+                        <input type="checkbox" name="Linguagem" id="Java" class="caixaChecagem"><label for="Java">Java</label>
+                        <input type="checkbox" name="Linguagem" id="php" class="caixaChecagem"><label for="php">PhP</label>
+                        <input type="checkbox" name="Linguagem" id="python" class="caixaChecagem"><label for="python">Python</label>
+                        <input type="checkbox" name="Linguagem" id="Html" class="caixaChecagem"><label for="Html">Html</label>
+                        <input type="checkbox" name="Linguagem" id="CSS" class="caixaChecagem"><label for="CSS">CSS</label>
                     </div>
                     <div class="experienciaProfissional">
                         <p> <label for="aboutu">Me conte sobre <span id="experiencia">você</span></label></p>
-                        <textarea rows="8" id="aboutu"></textarea>
+                        <textarea id="aboutu"></textarea>
                     </div>
                 <div class="submit">
                     <button type="submit" id="submitInf" class="submitButton">Enviar Informações</button>

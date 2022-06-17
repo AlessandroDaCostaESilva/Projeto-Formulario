@@ -7,4 +7,22 @@
         backdrop-filter: blur( 2px );
         padding-right: 15px;
     }
+    .Texto{
+        font-size: 1rem;
+        position: absolute;
+        top: 50px;
+    }
+    .register{
+        width: 16rem;
+        margin-left: 10%;
+    }
+    .blabel{
+        margin-left: 10%;
+    }
+    .formulario{
+        transform: scale(0.8);
+        margin-bottom: 50px;
+        margin-top: 50px;
+        width: 20rem;
+    }
 }

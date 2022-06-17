@@ -7,6 +7,7 @@
 
 .programador-sim{
     display: none;
+    animation: aparecerAoLado 100ms ease;
 }
 
 body{
@@ -56,9 +57,10 @@ body{
     cursor: text;
     font-size: 1.1rem;
     transition: 1s ease-in-out;
+    width: 200px;
 }
-.botao .register{
-    width: 20rem;
+.register{
+    width: 19rem;
     height: 2rem;
     padding-left: 15px;
     background: none;
@@ -69,25 +71,23 @@ body{
     color: #000;
     transition: 1s ease-in-out;
     outline: none;
+    position: relative;
 }
 
 #aboutu{
     max-width: 40vh;
-    max-height: 15vh;
+    max-height: 8vh;
     min-width: 100%;
-    min-height: 15vh;
+    min-height: 5vh;
 }
 
-.botao input:focus{
+.botao input:focus, .botao input:valid{
     border-color: #5a55ae;
     transition: 1s ease-in;
 }
 
-.botao input:focus ~ .blabel,
-input:valid ~ .blabel{
-    transform: translateY(-22px);
-    font-size: .8rem;
-    left: 0;
+.label-active{
+    transform: translateY(-22px) scale(0.8) translateX(-15px);
     transition: 1s ease-in;
 }
 
@@ -99,20 +99,23 @@ input:valid ~ .blabel{
 
 .birthday{
     position: absolute;
-    top: -15px;
-    left: 12px;
+    top: -10px;
+    left: 9.5px;
     background-color: #fafafa;
     color: #000;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 1px 5px;
+    border-radius: 5px 5px 0 0;
     font-size: .9rem;
     font-weight: bold;
     cursor: text;
+    border: 3px solid #3f51b1;
+    border-style: solid solid none solid;
 }
 
 .aniversario{
+    margin-top: 10px;
     width: 10rem;
-    height: 3rem;
+    height: 2rem;
     padding-left: 15px;
     border: none;
     border-radius: 5px;
@@ -120,6 +123,7 @@ input:valid ~ .blabel{
     color: #000;
     outline: none;
     cursor: pointer;
+    border: #3f51b1 3px solid;
 }
 
 .botao-arquivo{
@@ -133,7 +137,7 @@ input:valid ~ .blabel{
     padding-top: .6rem;
     width: 8rem;
     height: 3rem;
-    border: 3px solid #ddd;
+    border: 3px solid #3f51b1;
     border-radius: 5px;
     font-size: 1rem;
     color: #000;
@@ -170,11 +174,13 @@ input:valid ~ .blabel{
 .bslabel{
     background-color: #fafafa;
     color: #000;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 2.5px 5px;
+    border-radius: 5px 5px 0 0;
     font-size: .9rem;
     font-weight: bold;
     cursor: text;
+    border: #3f51b1 3px solid;
+    border-style: solid solid none solid;
 }
 
 .bsseletor{
@@ -187,6 +193,14 @@ input:valid ~ .blabel{
     margin-bottom: 10px;
     border-bottom-left-radius: 5px;
     padding-left: 5px;
+    border: #3f51b1 3px solid;
+    outline: none;
+}
+
+.bsseletor option{
+    appearance: none;
+    background-color: #fafafa;
+    border: #3f51b1 3px solid;
 }
 
 .botao-trabalho{
@@ -194,6 +208,34 @@ input:valid ~ .blabel{
     font-weight: bold;
     display: inline-block;
     margin-bottom: 8px;
+}
+
+.radio-Progamador{
+    appearance: none;
+    background-color: #d6d6dd;
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: rgba(0, 0, 0, 0.1);
+    margin: 5px 2px 0 2px;
+    position: relative;
+}
+
+.radio-Progamador:checked{
+    background-color: #3f51b1;
+    transition: 400ms ease;
+}
+.radio-Progamador:checked::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .experienciaProfissional{
@@ -240,4 +282,39 @@ input:valid ~ .blabel{
 
 .formulario{
     width: 40vh;
+}
+
+.caixaChecagem{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    margin: 0 5px;
+    background-color: #d6d6dd;
+    position: relative;
+}
+
+.caixaChecagem:checked{
+    background-color: #3f51b1;
+}
+
+.caixaChecagem:checked::before{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 5px;
+    border: 3px solid #fafafa;
+    border-style: none solid solid none;
+    left: 4px;
+    top: 2.5px;
+    transform: rotate(45deg);
+}
+
+@keyframes aparecerAoLado{
+    from{
+        transform: translateX(-20vh);
+    }
+    to{
+        transform: translateX(0);
+    }
 }
